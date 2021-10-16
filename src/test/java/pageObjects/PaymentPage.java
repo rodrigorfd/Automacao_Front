@@ -18,7 +18,7 @@ public class PaymentPage extends PaymentPageElementMapper {
         btnConfirmOrder.click();
     }
 
-    public String getOrderConfirmation(){
-        return orderConfirmation.getText();
+    public String getOrderConfirmationPageName() {
+        return OrderConfirmationPageName.getText();
     }
 }

@@ -10,9 +10,13 @@ public class MyAccountPage extends MyAccountPageElementMapper {
         PageFactory.initElements(Browser.getCurrentDriver(),this);
     }
 
-    public void doSearch(String args){
-        search_query_top.sendKeys(args);
+    public void doSearch(String wish){
+        search_query_top.sendKeys(wish);
         submit_search.click();
+    }
+
+    public String getMyAccountName(){
+        return myAccountName.getText();
     }
 
 }

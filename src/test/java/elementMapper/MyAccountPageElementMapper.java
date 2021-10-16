@@ -10,4 +10,7 @@ public class MyAccountPageElementMapper {
 
     @FindBy(css = "button.btn.btn-default.button-search")
     public WebElement submit_search;
+
+    @FindBy(css = ".navigation_page")
+    public WebElement myAccountName;
 }

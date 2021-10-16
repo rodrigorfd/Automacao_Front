@@ -11,6 +11,6 @@ public class PaymentPageElementMapper {
     @FindBy(css = "#cart_navigation button[type=\"submit\"]")
     public WebElement btnConfirmOrder;
 
-    @FindBy(css = "h1[class=\"page-heading\"]")
-    public WebElement orderConfirmation;
+    @FindBy(css = ".navigation_page")
+    public WebElement OrderConfirmationPageName;
 }

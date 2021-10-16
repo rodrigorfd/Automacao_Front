@@ -12,7 +12,7 @@ public class BaseTests {
         Browser.loadPage(Utils.getBaseUrl());
     }
 
-    //@After
+    @After
     public void tearDown(){
         Browser.close();
     }

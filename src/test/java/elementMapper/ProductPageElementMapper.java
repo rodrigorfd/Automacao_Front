@@ -10,4 +10,7 @@ public class ProductPageElementMapper {
 
     @FindBy(css = "a[title='Proceed to checkout']")
     public WebElement btnCheckout;
+
+    @FindBy(css = "#group_1")
+    public WebElement size;
 }

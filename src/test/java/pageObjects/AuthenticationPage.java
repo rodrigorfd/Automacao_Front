@@ -47,8 +47,8 @@ public class AuthenticationPage extends AuthenticationPageElementMapper {
     public void fillAddress1(String address){
         address1.sendKeys(address);
     }
-    public void fillAddress2(String address){
-        address2.sendKeys(address);
+    public void fillAddress2(String nro){
+        address2.sendKeys(nro);
     }
     public void fillNameCity (String name){
         city.sendKeys(name);
@@ -58,16 +58,16 @@ public class AuthenticationPage extends AuthenticationPageElementMapper {
         state.click();
     }
 
-    public void fillPostcode(String num){
-        postcode.sendKeys(num);
+    public void fillPostcode(String pcode){
+        postcode.sendKeys(pcode);
     }
 
     public void selectCountry(){
         country.click();
     }
 
-    public void fillOther(String arg){
-        other.sendKeys(arg);
+    public void fillOther(String add){
+        other.sendKeys(add);
     }
 
     public void fillPhoneHome(String num){
