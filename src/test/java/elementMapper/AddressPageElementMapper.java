@@ -10,7 +10,4 @@ public class AddressPageElementMapper {
 
     @FindBy(css = "button[ name='processAddress']")
     public WebElement btnAddress;
-
-    @FindBy(css = ".navigation_page")
-    public WebElement namePageAddress;
 }

@@ -13,10 +13,4 @@ public class PaymentPageElementMapper {
 
     @FindBy(css = "h1[class=\"page-heading\"]")
     public WebElement orderConfirmation;
-
-    @FindBy(css = ".navigation_page")
-    public WebElement NamePagePaymentMethod;
-
-    @FindBy(css = ".navigation_page")
-    public WebElement NamePageBankWirePayment;
 }

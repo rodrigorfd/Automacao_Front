@@ -92,56 +92,62 @@ public class SetupTest extends BaseTests{
 
         home.clickBtnLogin();
         System.out.println("CLicou em 'Sign in' e direcionou para a pagina de login");
-        assertTrue(Browser.getCurrentDriver().getCurrentUrl()
-                .contains(Utils.getBaseUrl().concat("index.php?controller=authentication&back=my-account")));
-        System.out.println("Validou pagina de login");
 
         login.doLogin();
         System.out.println("Fez Login");
-        assertTrue(Browser.getCurrentDriver().getCurrentUrl()
-                .contains(Utils.getBaseUrl().concat("index.php?controller=my-account")));
-        System.out.println("Validou a url de minha conta");
 
         conta.doSearch("dress");
         System.out.println("Fez uma pesquisa");
-        assertTrue(search.isSearchPage());
-        System.out.println("Validou pagina de busca");
 
         search.selectProductByColor();
-        System.out.println("Selecionou o produto da cor preta");
-        assertTrue(Browser.getCurrentDriver().getCurrentUrl()
-                .contains(Utils.getBaseUrl().concat("index.php?id_product=5&controller=product#/size-s/color-black")));
-        System.out.println("Validou pagina do produto");
+        System.out.println("Selecionou o produto pela cor preta");
 
+        product.clickBtnAddToCart();
+        System.out.println("Adicionou produto ao carrinho");
+        product.clickBtnCheckout();
+        System.out.println("Direcionou para a pagina de Checkout");
+        cart.clickBtnProceedToCheckout();
+        System.out.println("Avançou para a proxima etapa");
+        address.fillTextBox("Embalado para presente");
+        System.out.println("Adicionou comentário ao pedido");
+        address.clickBtnProceedAddress();
+        System.out.println("Avançou para a pagina de envio");
+        shipping.clickBtnCheckbox();
+        System.out.println("Aceitou termos de serviço");
+        shipping.clickBtnSubmitShipping();
+        System.out.println("Avançou para a pagina de pagamento");
+        pay.clickbtnPaymentMethod();
+        System.out.println("Selecionou a forma de pagamento por transferencia bancaria");
+        pay.clickBtnConfirmOrder();
+        System.out.println("clicou em confirmar o pedido");
+    }
+
+    @Test
+    public void productOnCartTest(){
+
+        HomePage home = new HomePage();
+        LoginPage login = new LoginPage();
+        MyAccountPage conta = new MyAccountPage();
+        SearchPage search = new SearchPage();
+        ProductPage product = new ProductPage();
+        CartPage cart = new CartPage();
+
+        //--------------------------------------------------------------------------
+
+        home.clickBtnLogin();
+        System.out.println("CLicou em 'Sign in' e direcionou para a pagina de login");
+        login.doLogin();
+        System.out.println("Fez Login");
+        conta.doSearch("dress");
+        System.out.println("Fez uma pesquisa");
+        search.selectProductByColor();
+        System.out.println("Selecionou o produto pela cor preta");
         product.clickBtnAddToCart();
         System.out.println("Adicionou produto ao carrinho");
         product.clickBtnCheckout();
         System.out.println("Direcionou para a pagina de Checkout");
         assertTrue(cart.getNameProductCar().equals("Printed Summer Dress"));
         System.out.println("Validou produto no carrinho");
-        cart.clickBtnProceedToCheckout();
-        System.out.println("Avançou para a proxima etapa");
-        assertTrue(address.getNamePageAddress().equals("Addresses"));
-        System.out.println("Validou pagina de endereço");
-        address.fillTextBox("Embalado para presente");
-        System.out.println("Adicionou comentário ao pedido");
-        address.clickBtnProceedAddress();
-        System.out.println("Avançou para a pagina de envio");
-        assertTrue(shipping.getNamePageShipping().equals("Shipping"));
-        System.out.println("Validou pagina de envio");
-        shipping.clickBtnCheckbox();
-        System.out.println("Aceitou termos de serviço");
-        shipping.clickBtnSubmitShipping();
-        System.out.println("Avançou para a pagina de pagamento");
-        assertTrue(pay.getNamePagePaymentMethod().equals("Your payment method"));
-        System.out.println("Validou pagina de metodo de pagamento");
-        pay.clickbtnPaymentMethod();
-        System.out.println("Selecionou a forma de pagamento por transferencia bancaria");
-        assertTrue(pay.getNamePageBankWirePayment().equals("Bank-wire payment."));
-        System.out.println("Validou escolha de metodo de pagamento");
-        pay.clickBtnConfirmOrder();
-        System.out.println("clicou em confirmar o pedido");
-        assertTrue(pay.getOrderConfirmation().equals("ORDER CONFIRMATION"));
-        System.out.println("Validou confirmação de pedido");
     }
+
 }

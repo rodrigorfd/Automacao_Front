@@ -17,9 +17,4 @@ public class AddressPage extends AddressPageElementMapper {
     public void clickBtnProceedAddress(){
         btnAddress.click();
     }
-
-    public String getNamePageAddress(){
-        return namePageAddress.getText();
-    }
-
 }

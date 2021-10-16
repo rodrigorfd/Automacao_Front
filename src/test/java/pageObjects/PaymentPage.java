@@ -21,12 +21,4 @@ public class PaymentPage extends PaymentPageElementMapper {
     public String getOrderConfirmation(){
         return orderConfirmation.getText();
     }
-
-    public String getNamePagePaymentMethod(){
-        return NamePagePaymentMethod.getText();
-    }
-
-    public String getNamePageBankWirePayment(){
-        return NamePageBankWirePayment.getText();
-    }
 }

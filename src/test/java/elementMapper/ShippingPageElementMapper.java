@@ -10,7 +10,4 @@ public class ShippingPageElementMapper {
 
     @FindBy(css = "button[name=\"processCarrier\"]")
     public WebElement btnSubmitShipping;
-
-    @FindBy(css = ".navigation_page")
-    public WebElement namePageShipping;
 }
