@@ -30,10 +30,10 @@ public class AuthenticationPage extends AuthenticationPageElementMapper {
         passwd.sendKeys(pswd);
     }
 
-    public void fillBirthDate(){
-        days.findElement(By.xpath("//*[@id=\"days\"]/option[10]")).click();
-        months.findElement(By.xpath("//*[@id=\"months\"]/option[6]")).click();
-        years.findElement(By.xpath("//*[@id=\"years\"]/option[39]")).click();
+    public void fillBirthDate(int d, int m, int y){
+        days.findElement(By.cssSelector("option[value='"+d+"']")).click();
+        months.findElement(By.cssSelector("option[value='"+m+"']")).click();
+        years.findElement(By.cssSelector("option[value='"+y+"']")).click();
     }
 
     public void clickNewsletterAndOffers(){
@@ -55,7 +55,7 @@ public class AuthenticationPage extends AuthenticationPageElementMapper {
     }
 
     public void selectState(){
-        state.findElement(By.xpath("//*[@id=\"id_state\"]/option[11]")).click();
+        state.click();
     }
 
     public void fillPostcode(String num){
@@ -63,7 +63,7 @@ public class AuthenticationPage extends AuthenticationPageElementMapper {
     }
 
     public void selectCountry(){
-        country.findElement(By.xpath("//*[@id=\"id_country\"]/option[2]")).click();
+        country.click();
     }
 
     public void fillOther(String arg){

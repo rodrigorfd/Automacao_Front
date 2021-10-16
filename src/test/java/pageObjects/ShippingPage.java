@@ -17,4 +17,8 @@ public class ShippingPage extends ShippingPageElementMapper {
     public void clickBtnSubmitShipping(){
         btnSubmitShipping.click();
     }
+
+    public String getNamePageShipping(){
+        return namePageShipping.getText();
+    }
 }

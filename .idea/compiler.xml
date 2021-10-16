@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Desafio_Automacao" />
         <module name="Treinamento_Automacao" />
+        <module name="Desafio-Automacao" />
       </profile>
     </annotationProcessing>
   </component>

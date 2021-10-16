@@ -8,8 +8,8 @@ public class LoginPageElementMapper {
     public WebElement email;
     public WebElement passwd;
     public WebElement SubmitLogin;
-    @FindBy(id = "email_create")
+    @FindBy(css = "#email_create")
     public WebElement email_create;
-    @FindBy(id = "SubmitCreate")
+    @FindBy(css = "button[type=\"submit\"]#SubmitCreate")
     public WebElement SubmitCreate;
 }

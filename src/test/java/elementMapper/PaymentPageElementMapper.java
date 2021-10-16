@@ -3,8 +3,6 @@ package elementMapper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.nio.file.WatchEvent;
-
 public class PaymentPageElementMapper {
 
     @FindBy(css = ".bankwire")
@@ -15,4 +13,10 @@ public class PaymentPageElementMapper {
 
     @FindBy(css = "h1[class=\"page-heading\"]")
     public WebElement orderConfirmation;
+
+    @FindBy(css = ".navigation_page")
+    public WebElement NamePagePaymentMethod;
+
+    @FindBy(css = ".navigation_page")
+    public WebElement NamePageBankWirePayment;
 }

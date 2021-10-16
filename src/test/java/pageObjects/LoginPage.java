@@ -4,7 +4,6 @@ import elementMapper.LoginPageElementMapper;
 import org.openqa.selenium.support.PageFactory;
 import utils.Browser;
 
-import java.util.Random;
 
 public class LoginPage extends LoginPageElementMapper {
 

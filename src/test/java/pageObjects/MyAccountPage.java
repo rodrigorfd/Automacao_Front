@@ -1,12 +1,8 @@
 package pageObjects;
 
 import elementMapper.MyAccountPageElementMapper;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Browser;
-
-import java.util.WeakHashMap;
 
 public class MyAccountPage extends MyAccountPageElementMapper {
 

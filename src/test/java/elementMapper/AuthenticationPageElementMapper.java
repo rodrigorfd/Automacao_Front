@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class AuthenticationPageElementMapper {
 
-    @FindBy(id = "id_gender1")
+    @FindBy(css = "input[name=\"id_gender\"]#id_gender1")
     public WebElement id_gender1;
 
     @FindBy(id = "customer_firstname")
@@ -17,14 +17,14 @@ public class AuthenticationPageElementMapper {
     @FindBy(id = "email")
     public WebElement email;
 
-    @FindBy(name = "passwd")
+    @FindBy(id = "passwd")
     public WebElement passwd;
 
-    @FindBy(id = "days")
+    @FindBy(css = "#days")
     public WebElement days;
-    @FindBy(id = "months")
+    @FindBy(css = "#months")
     public WebElement months;
-    @FindBy(id = "years")
+    @FindBy(css = "#years")
     public WebElement years;
 
     @FindBy(id = "newsletter")
@@ -41,13 +41,13 @@ public class AuthenticationPageElementMapper {
     public  WebElement address2;
     @FindBy(id = "city")
     public  WebElement city;
-    @FindBy(id = "id_state")
+    @FindBy(css = "#id_state option[value='11']")
     public  WebElement state;
 
     @FindBy(id = "postcode")
     public  WebElement postcode;
 
-    @FindBy(id = "id_country")
+    @FindBy(css = "#id_country option[value='21']")
     public WebElement country;
 
     @FindBy(id = "other")
