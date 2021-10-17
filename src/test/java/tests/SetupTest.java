@@ -1,18 +1,21 @@
 package tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.Test;
 import pageObjects.*;
 
 import java.util.Random;
 
 import static org.junit.Assert.assertTrue;
-
+@Feature("Teste de um site de ecommerce")
 public class SetupTest extends BaseTests{
 
     Random random = new Random();
-    String e_mail = "goku_ssj_" +random.nextInt(30)+ "@capsulecorp.com";
+    String e_mail = "goku_ssj_" +random.nextInt(17)+ "@capsulecorp.com";
 
     @Test
+    @Story("Criar uma conta no site")
     public void testAccountCreation(){
         HomePage home = new HomePage();
         LoginPage login = new LoginPage();
@@ -49,6 +52,7 @@ public class SetupTest extends BaseTests{
 
 
     @Test
+    @Story("Fazer uma compra no site")
     public void purchaseTest (){
 
         HomePage home = new HomePage();
@@ -85,6 +89,7 @@ public class SetupTest extends BaseTests{
     }
 
     @Test
+    @Story("Adicionar um produto ao carrinho")
     public void productOnCartTest(){
 
         HomePage home = new HomePage();
