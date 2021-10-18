@@ -32,7 +32,7 @@ public class LoginPage extends LoginPageElementMapper {
         passwd.sendKeys("k4meh4meh4");
     }
 
-    @Step("clicou em fazer login")
+    @Step("Clicou em fazer login")
     public void clickBtnSubmitLogin(){
         SubmitLogin.click();
     }

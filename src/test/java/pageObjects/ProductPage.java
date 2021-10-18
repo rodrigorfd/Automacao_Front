@@ -17,7 +17,7 @@ public class ProductPage extends ProductPageElementMapper {
         addToCart.click();
     }
 
-    @Step("Clivou no botão para avançar para o Checkout")
+    @Step("Clicou no botão para avançar para o Checkout")
     public void clickBtnCheckout(){
         btnCheckout.click();
     }
